@@ -20,7 +20,7 @@ namespace test2
             for (int i = 0,j=2; i < 100000; i++,j++)
                 a[i] = j;
             
-            var v = a.Where((n) => {
+            var v = a.AsParallel().Where((n) => {
 
                 Boolean test = true;
                 
